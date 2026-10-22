@@ -132,7 +132,7 @@ O `.env` fica no host, fora do Git e da imagem. Sem chave, o app funciona em mod
 
 ## 6. Testes executados
 
-- `cargo test` no backend: 16 testes (catálogo, fetch RSS/Google/Bing, tokenização, clustering, relatório, fulltext).
+- `cargo test` no backend: 17 testes (catálogo, fetch RSS/Google/Bing, tokenização, clustering, relatório, fulltext e redação de segredos em logs).
 - Build `wasm-pack` release.
 - Docker build ARM64 + container healthy.
 - Smoke HTTPS: `/api/health`, `/`, assets, fontes.

@@ -11,12 +11,24 @@ static INLINE_CITATIONS: Lazy<Regex> =
 static INLINE_CITATION_NUMBERS: Lazy<Regex> =
     Lazy::new(|| Regex::new(r"\[(\d+(?:\s*,\s*\d+)*)\]").unwrap());
 
-#[derive(Clone, Debug)]
+#[derive(Clone)]
 pub struct LlmConfig {
     pub provider: String,
     pub base_url: String,
     pub model: String,
     pub api_key: String,
+}
+
+impl std::fmt::Debug for LlmConfig {
+    fn fmt(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        formatter
+            .debug_struct("LlmConfig")
+            .field("provider", &self.provider)
+            .field("base_url", &self.base_url)
+            .field("model", &self.model)
+            .field("api_key", &"<redacted>")
+            .finish()
+    }
 }
 
 impl LlmConfig {
@@ -374,4 +386,22 @@ Regras: citations são índices de 1 a {shown}. Não cite artigo inexistente. N�
         limitations,
         generated_by: format!("llm:{}", config.label()),
     })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::LlmConfig;
+
+    #[test]
+    fn debug_redacts_api_key() {
+        let config = LlmConfig {
+            provider: "openrouter".to_string(),
+            base_url: "https://example.com/v1".to_string(),
+            model: "test-model".to_string(),
+            api_key: "super-secret-test-key".to_string(),
+        };
+        let debug = format!("{config:?}");
+        assert!(!debug.contains("super-secret-test-key"));
+        assert!(debug.contains("<redacted>"));
+    }
 }

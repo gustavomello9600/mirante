@@ -17,6 +17,7 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 
 - Configuração do frontend movida para `frontend/config.js`, sem URLs de produção embutidas.
 - Erros 500 da API não expõem detalhes técnicos por padrão.
+- A chave do LLM é redigida na formatação de diagnóstico (`Debug`).
 - Scripts de deploy passam a exigir host e domínio por variáveis de ambiente.
 - User-Agent e `HTTP-Referer` configuráveis por ambiente.
 
