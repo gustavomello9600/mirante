@@ -18,6 +18,10 @@ if [[ "$API_BASE" == *'"'* ]]; then
   exit 1
 fi
 
+if [ -z "$API_BASE" ]; then
+  echo "aviso: MIRANTE_API_BASE vazio; o frontend usará a mesma origem. Em um host estático sem proxy, defina a URL pública do backend." >&2
+fi
+
 wasm-pack build --target web --release --no-opt --out-dir dist/pkg
 cp index.html dist/
 cp config.js dist/
