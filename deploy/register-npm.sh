@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Registra o Mirante no Nginx Proxy Manager do host Oracle.
+# Registra o Mirante no Nginx Proxy Manager do host de deploy.
 # Roda no host, depois do docker compose up.
 set -euo pipefail
 

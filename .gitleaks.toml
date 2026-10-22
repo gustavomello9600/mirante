@@ -4,3 +4,11 @@ useDefault = true
 [[allowlists]]
 description = "Exemplo de configuração, sem segredos reais"
 paths = ['''\.env\.example$''']
+
+[[allowlists]]
+description = "Artefatos de build e caches locais (não versionados)"
+paths = [
+  '''(^|/)target/''',
+  '''(^|/)dist/''',
+  '''(^|/)\.vercel/''',
+]
