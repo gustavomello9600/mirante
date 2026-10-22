@@ -11,6 +11,8 @@
 
 [English summary](README.en.md) · [Arquitetura](ARCHITECTURE.md) · [Produto](PRODUCT.md) · [Design](DESIGN.md) · [Marca](BRAND.md) · [Como contribuir](CONTRIBUTING.md)
 
+![Tela inicial do Mirante, com busca por tema e sugestões de cobertura](docs/screenshot-home.png)
+
 ---
 
 ## O que é

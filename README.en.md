@@ -9,6 +9,8 @@
 
 The primary documentation is in Portuguese: [`README.md`](README.md). This page is a short English overview.
 
+![Mirante home screen](docs/screenshot-home.png)
+
 ## What it does
 
 - Searches recent coverage of a topic across curated outlets, Google News, Bing News and GDELT.
