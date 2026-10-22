@@ -1,0 +1,30 @@
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+
+# Controle de versão e CI
+.git/
+.github/
+.gitignore
+
+# Builds e caches
+target/
+**/target/
+dist/
+**/dist/
+.vercel/
+**/.vercel/
+node_modules/
+
+# Bancos locais
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Documentação de desenvolvimento (não entra na imagem)
+*.md
+!backend/data/
+!frontend/fonts/

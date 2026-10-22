@@ -1,0 +1,24 @@
+{
+  "note": "Feeds RSS usados para a amostra curada. A avaliação de viés/factualidade vem de data/sources.json (curadoria demo).",
+  "feeds": [
+    { "name": "G1", "domain": "g1.globo.com", "url": "https://g1.globo.com/rss/g1/" },
+    { "name": "Folha de S.Paulo", "domain": "folha.uol.com.br", "url": "https://feeds.folha.uol.com.br/mercado/rss.xml" },
+    { "name": "Folha de S.Paulo", "domain": "folha.uol.com.br", "url": "https://feeds.folha.uol.com.br/poder/rss.xml" },
+    { "name": "UOL", "domain": "uol.com.br", "url": "https://rss.uol.com.br/feed/noticias.xml" },
+    { "name": "CNN Brasil", "domain": "cnnbrasil.com.br", "url": "https://www.cnnbrasil.com.br/feed/" },
+    { "name": "Metrópoles", "domain": "metropoles.com", "url": "https://www.metropoles.com/feed" },
+    { "name": "Poder360", "domain": "poder360.com.br", "url": "https://www.poder360.com.br/feed/" },
+    { "name": "Agência Brasil", "domain": "agenciabrasil.ebc.com.br", "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml" },
+    { "name": "Exame", "domain": "exame.com", "url": "https://exame.com/feed/" },
+    { "name": "InfoMoney", "domain": "infomoney.com.br", "url": "https://www.infomoney.com.br/feed/" },
+    { "name": "DW Brasil", "domain": "dw.com", "url": "https://rss.dw.com/rdf/rss-br-all" },
+    { "name": "Veja", "domain": "veja.abril.com.br", "url": "https://veja.abril.com.br/rss/" },
+    { "name": "Jovem Pan", "domain": "jovempan.com.br", "url": "https://jovempan.com.br/feed/" },
+    { "name": "Brasil de Fato", "domain": "brasildefato.com.br", "url": "https://www.brasildefato.com.br/rss" },
+    { "name": "CartaCapital", "domain": "cartacapital.com.br", "url": "https://www.cartacapital.com.br/feed/" },
+    { "name": "Revista Fórum", "domain": "revistaforum.com.br", "url": "https://revistaforum.com.br/feed/" },
+    { "name": "Agência Pública", "domain": "apublica.org", "url": "https://apublica.org/feed/" },
+    { "name": "The Guardian", "domain": "theguardian.com", "url": "https://www.theguardian.com/world/rss" },
+    { "name": "The New York Times", "domain": "nytimes.com", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml" }
+  ]
+}

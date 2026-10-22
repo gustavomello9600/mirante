@@ -1,0 +1,68 @@
+name: Bug report
+description: Reporte um comportamento incorreto ou uma falha reproduzível.
+title: "[bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar. **Não inclua segredos, chaves, dados pessoais ou texto integral de matérias.**
+        Para vulnerabilidades, use o canal privado descrito em SECURITY.md.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o comportamento observado e o que você esperava.
+      placeholder: Ao buscar por..., o app...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Abra ...
+        2. Busque por ...
+        3. Clique em ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Sistema, navegador, versão do Rust, Docker ou commit.
+      placeholder: "Ubuntu 24.04, Firefox 140, commit abc1234"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Backend / API
+        - Frontend / interface
+        - Análise / clustering
+        - LLM / relance
+        - Design system
+        - Deploy / Docker
+        - Documentação
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou capturas
+      description: Remova segredos, caminhos pessoais e dados sensíveis antes de colar.
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmações
+      options:
+        - label: Procurei issues existentes antes de abrir esta.
+          required: true
+        - label: Não incluí segredos, chaves ou dados pessoais.
+          required: true

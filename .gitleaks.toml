@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Exemplo de configuração, sem segredos reais"
+paths = ['''\.env\.example$''']

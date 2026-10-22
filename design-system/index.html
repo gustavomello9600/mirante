@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirante Design System</title>
+<meta name="description" content="Mirante Design System — uma fundação editorial para um leitor de cobertura aberto. Tipografia, cor, espaço, componentes e padrões.">
+<meta name="theme-color" content="#F4F3ED">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F4F3ED'/%3E%3Ccircle cx='16' cy='13' r='6.5' fill='none' stroke='%232438E8' stroke-width='2'/%3E%3Cpath d='M4 24h24' stroke='%232438E8' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/site.css">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('mirante-theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-logo" viewBox="0 0 32 32">
+    <circle cx="16" cy="13" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M3 24h26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="10.8" cy="10.8" r="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="m15.6 15.6 4.6 4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24">
+    <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24">
+    <path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24">
+    <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24">
+    <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24">
+    <rect x="9" y="9" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M15 9V5.5A1.5 1.5 0 0 0 13.5 4h-8A1.5 1.5 0 0 0 4 5.5v8A1.5 1.5 0 0 0 5.5 15H9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24">
+    <path d="m5 12 4.2 4.2L19 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-external" viewBox="0 0 24 24">
+    <path d="M14 4h6v6M20 4l-8.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24">
+    <path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4.2L6 21V4.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-share" viewBox="0 0 24 24">
+    <circle cx="6" cy="12" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="18" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="18" cy="18" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="m8.2 10.9 7.6-3.8M8.2 13.1l7.6 3.8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="i-info" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 11v5.5M12 7.8v.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24">
+    <path d="M12 3.5 21 20H3L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M12 9v5M12 17v.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24">
+    <path d="M4 6h16M7 12h10M10 18h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<div class="shell">
+  <aside class="rail" id="rail" aria-label="Navegação do design system">
+    <div class="rail-top">
+      <a class="brand-lockup" href="#top" aria-label="Mirante Design System — início">
+        <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="brand-word">mirante</span>
+      </a>
+      <p class="rail-kicker">Design system <span>v0.1</span></p>
+    </div>
+
+    <nav class="rail-nav" aria-label="Seções">
+      <a href="#marca" data-nav>Marca</a>
+      <a href="#tipografia" data-nav>Tipografia</a>
+      <a href="#cor" data-nav>Cor</a>
+      <a href="#espaco" data-nav>Espaço &amp; grade</a>
+      <a href="#componentes" data-nav>Componentes</a>
+      <a href="#padroes" data-nav>Padrões</a>
+      <a href="#tokens" data-nav>Tokens</a>
+      <a href="#acessibilidade" data-nav>Acessibilidade</a>
+    </nav>
+
+    <div class="rail-foot">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <span data-theme-label>Tema escuro</span>
+      </button>
+      <p class="rail-note">Rust + WebAssembly<br>código aberto · 2026</p>
+    </div>
+
+    <button class="rail-close" type="button" data-menu-toggle aria-label="Fechar menu">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </aside>
+
+  <div class="scrim" data-scrim hidden></div>
+
+  <div class="main">
+    <header class="mobile-bar">
+      <a class="brand-lockup" href="#top" aria-label="Mirante Design System — início">
+        <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="brand-word">mirante</span>
+      </a>
+      <div class="mobile-bar-actions">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Alternar tema">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="rail" aria-label="Abrir menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="hero-kicker"><span class="status-dot" aria-hidden="true"></span> Design system · v0.1</p>
+          <div class="hero-lockup">
+            <svg class="hero-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+            <h1 class="wordmark">mirante</h1>
+          </div>
+          <p class="hero-tagline">A notícia por inteiro.</p>
+          <p class="hero-lede">Um mirante sobre a cobertura: quem publicou, de onde fala e o que ficou de fora. Uma fundação editorial para o app em Rust + WebAssembly.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#padroes">Ver o sistema em uso
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+            <a class="link-quiet" href="#tokens">Baixar tokens</a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>Tipografia</dt><dd>Instrument · Literata · Schibsted</dd></div>
+            <div><dt>Base</dt><dd>4 px · 12 colunas</dd></div>
+            <div><dt>Princípio</dt><dd>Perspectiva sem postura</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <div class="hero-frame-head">
+              <span>Relance</span>
+              <span>128 artigos · 64 veículos</span>
+            </div>
+            <h2>A tarifa de energia entrou em consulta. Cada lado escolheu um número.</h2>
+            <p class="hero-frame-lede">A cobertura mudou de foco três vezes em uma semana. O que ficou de fora foi o cálculo que afeta quem está na ponta.</p>
+            <div class="bias-chart" data-bias-chart data-values="42,31,21,6" data-total="128">
+              <div class="bias-bar" data-bias-bar role="img" aria-label="Distribuição de 128 artigos por viés: 42% esquerda, 31% centro, 21% direita, 6% sem avaliação."></div>
+              <ul class="bias-legend" data-bias-legend></ul>
+            </div>
+            <div class="hero-frame-foot">
+              <span>Atualizado há 12 min</span>
+              <a href="#padroes">Abrir relance <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </div>
+          <p class="hero-caption">Prévia do produto · conteúdo de demonstração</p>
+        </div>
+      </section>
+
+      <section class="section" id="marca" aria-labelledby="marca-title">
+        <header class="section-head">
+          <div class="horizon" aria-hidden="true"></div>
+          <div class="section-head-grid">
+            <p class="section-label">Marca</p>
+            <div class="section-head-copy">
+              <h2 id="marca-title">Um mirante, não um tribunal.</h2>
+              <p class="section-lede">O Mirante não escolhe a versão certa da notícia. Ele mostra o conjunto: quem publicou, de onde fala, o que cada lado destacou e o que ninguém contou.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="editorial-grid">
+          <div class="editorial-body">
+            <p class="lede">Toda notícia chega emoldurada. A moldura não é um defeito a ser escondido; é a informação que falta para entender o que se está lendo.</p>
+            <p>O nome vem do português: mirante é o ponto alto de onde se observa o horizonte. A marca não promete a verdade — promete <strong>perspectiva com evidência</strong>. Um lugar de onde se vê a cobertura inteira, não mais uma versão do mesmo fato.</p>
+            <p>O sistema visual traduz isso em uma linguagem de revista, não de dashboard: papel frio, tinta densa, uma serifa de alto contraste para a voz e uma grotesca de redação para os dados. A ousadia fica concentrada no wordmark e na manchete; todo o resto trabalha em silêncio.</p>
+          </div>
+          <aside class="margin-note">
+            <p class="margin-note-label">Em uma frase</p>
+            <blockquote>“Veja o ângulo antes da manchete.”</blockquote>
+            <p class="margin-note-body">A marca não é apartidária por decreto. É transparente por construção: mostra a amostra, a fonte de cada avaliação e o que é desconhecido.</p>
+          </aside>
+        </div>
+
+        <div class="principles">
+          <article class="principle">
+            <h3>Perspectiva sem postura</h3>
+            <p>Mostrar posições não é tomar partido. O produto descreve a cobertura; não sentencia a notícia.</p>
+          </article>
+          <article class="principle">
+            <h3>Evidência antes do veredito</h3>
+            <p>Toda afirmação do relance aponta para um artigo. Números são calculados em código; o texto interpreta.</p>
+          </article>
+          <article class="principle">
+            <h3>Calma por padrão</h3>
+            <p>Sem urgência artificial, sem feed infinito, sem caixa alta gritando. O ritmo é o de uma leitura, não o de um alerta.</p>
+          </article>
+          <article class="principle">
+            <h3>Aberto por desenho</h3>
+            <p>Código, método e limites visíveis. Dados de terceiros são plugáveis; “sem avaliação” é um estado legítimo.</p>
+          </article>
+        </div>
+
+        <div class="logo-stage">
+          <div class="logo-stage-head">
+            <p class="micro-label">Marca principal</p>
+            <p class="micro-note">Símbolo: sol baixo sobre a linha do horizonte. O ponto de observação.</p>
+          </div>
+          <div class="logo-primary">
+            <svg class="logo-primary-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+            <span class="logo-primary-word">mirante</span>
+          </div>
+          <div class="logo-variants">
+            <div class="logo-variant">
+              <p class="micro-label">Símbolo</p>
+              <div class="logo-tile"><svg class="logo-tile-mark" aria-hidden="true"><use href="#i-logo"/></svg></div>
+            </div>
+            <div class="logo-variant">
+              <p class="micro-label">Wordmark</p>
+              <div class="logo-tile logo-tile-word"><span>mirante</span></div>
+            </div>
+            <div class="logo-variant">
+              <p class="micro-label">Assinatura curta</p>
+              <div class="logo-tile logo-tile-dark"><svg class="logo-tile-mark" aria-hidden="true"><use href="#i-logo"/></svg><span>mirante</span></div>
+            </div>
+          </div>
+          <div class="logo-rules">
+            <p><strong>Clearspace:</strong> a altura do símbolo em todos os lados.</p>
+            <p><strong>Não:</strong> esticar, inclinar, adicionar sombra, contornar ou trocar a fonte.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tipografia" aria-labelledby="tipo-title">
+        <header class="section-head">
+          <div class="horizon" aria-hidden="true"></div>
+          <div class="section-head-grid">
+            <p class="section-label">Tipografia</p>
+            <div class="section-head-copy">
+              <h2 id="tipo-title">Três vozes, uma hierarquia.</h2>
+              <p class="section-lede">Instrument Serif dá a voz; Literata carrega a leitura; Schibsted Grotesk organiza a interface. A combinação não é a dupla óbvia de serifa e sans geométrica — e é justamente por isso que funciona.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="specimen">
+          <div class="specimen-head">
+            <p class="micro-label">Display · Instrument Serif</p>
+            <p class="micro-note">Manchetes, wordmark, citações. Tracking negativo; line-height abaixo de 1.</p>
+          </div>
+          <p class="specimen-display">A notícia chega emoldurada.</p>
+        </div>
+
+        <div class="specimen">
+          <div class="specimen-head">
+            <p class="micro-label">Leitura · Literata</p>
+            <p class="micro-note">Corpo em 19 px, medida de 66 caracteres, eixo óptico automático.</p>
+          </div>
+          <div class="specimen-reading">
+            <p class="specimen-lede">Um bom resumo não encurta a notícia. Ele mostra o que foi escolhido — e o que ficou de fora.</p>
+            <p class="specimen-body">A cobertura de um mesmo fato raramente é uma disputa entre verdade e mentira. É uma disputa entre enquadramentos: qual número entra na manchete, qual voz abre a matéria, qual consequência ganha o segundo parágrafo. Ler a cobertura é aprender a ver essas escolhas.</p>
+          </div>
+        </div>
+
+        <div class="specimen">
+          <div class="specimen-head">
+            <p class="micro-label">Interface · Schibsted Grotesk</p>
+            <p class="micro-note">Navegação, metadados, botões e números. Tabular por padrão em dados.</p>
+          </div>
+          <div class="specimen-ui">
+            <span class="tag tag-left"><span class="tag-dot"></span>Esquerda</span>
+            <span class="tag tag-center"><span class="tag-dot"></span>Centro</span>
+            <span class="tag tag-right"><span class="tag-dot"></span>Direita</span>
+            <span class="specimen-number">42%</span>
+            <span class="specimen-number">128</span>
+            <span class="specimen-number">12 min</span>
+          </div>
+        </div>
+
+        <div class="type-table-wrap">
+          <table class="type-table">
+            <caption class="visually-hidden">Escala tipográfica do Mirante</caption>
+            <thead>
+              <tr><th scope="col">Token</th><th scope="col">Tamanho</th><th scope="col">Entrelinha</th><th scope="col">Uso</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>--text-display-xl</code></td><td><span data-type-size="display-xl">—</span></td><td>0.94</td><td>Capa e wordmark</td></tr>
+              <tr><td><code>--text-display-l</code></td><td><span data-type-size="display-l">—</span></td><td>0.96</td><td>Manchete de capa</td></tr>
+              <tr><td><code>--text-display-m</code></td><td><span data-type-size="display-m">—</span></td><td>1.00</td><td>Manchete de matéria</td></tr>
+              <tr><td><code>--text-headline</code></td><td><span data-type-size="headline">—</span></td><td>1.04</td><td>Título de seção</td></tr>
+              <tr><td><code>--text-title</code></td><td><span data-type-size="title">—</span></td><td>1.18</td><td>Título de painel</td></tr>
+              <tr><td><code>--text-lede</code></td><td><span data-type-size="lede">—</span></td><td>1.45</td><td>Olho / standfirst</td></tr>
+              <tr><td><code>--text-body</code></td><td><span data-type-size="body">—</span></td><td>1.66</td><td>Leitura longa</td></tr>
+              <tr><td><code>--text-ui</code></td><td><span data-type-size="ui">—</span></td><td>1.35</td><td>Interface</td></tr>
+              <tr><td><code>--text-small</code></td><td><span data-type-size="small">—</span></td><td>1.45</td><td>Metadados</td></tr>
+              <tr><td><code>--text-caption</code></td><td><span data-type-size="caption">—</span></td><td>1.40</td><td>Legendas</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="reading-demo">
+          <p class="reading-meta">Ensaio · 8 min de leitura</p>
+          <h3>A cidade que aprendeu a ler o próprio trânsito</h3>
+          <p class="reading-lede">Durante anos, o debate foi sobre mais faixas. O que mudou a conversa foi uma planilha de horários — e a decisão de publicá-la.</p>
+          <p class="reading-body"><span class="dropcap">N</span>o começo, parecia um problema de engenharia. A prefeitura tinha números sobre congestionamento, mas nenhuma história sobre eles. A imprensa local repetia a mesma frase — “o trânsito piorou” — sem dizer para quem, em que hora e em qual direção. A cobertura era volumosa e, ainda assim, cega.</p>
+          <p>O ponto de virada veio quando uma repórter cruzou os dados de velocidade com os horários escolares. A conclusão não era sobre carros: era sobre crianças que atravessavam uma avenida às sete da manhã. A partir dali, o enquadramento mudou. Não porque alguém “escolheu um lado”, mas porque alguém escolheu um recorte.</p>
+          <blockquote>“A notícia não estava nos dados. Estava na pergunta que ninguém havia feito aos dados.”</blockquote>
+          <p>É esse deslocamento que um leitor de cobertura precisa enxergar. Não para substituir a reportagem, mas para saber o que a reportagem decidiu olhar — e o que deixou no ponto cego.</p>
+          <p class="reading-caption">Legenda: a mudança de enquadramento não alterou os fatos; alterou a hierarquia entre eles.</p>
+        </div>
+      </section>
+
+      <section class="section" id="cor" aria-labelledby="cor-title">
+        <header class="section-head">
+          <div class="horizon" aria-hidden="true"></div>
+          <div class="section-head-grid">
+            <p class="section-label">Cor</p>
+            <div class="section-head-copy">
+              <h2 id="cor-title">Cor é informação.</h2>
+              <p class="section-lede">Papel frio, tinta densa, ultramar para ação. As cores de espectro existem para os dados — nunca para decorar a marca. E “sem avaliação” tem um cinza próprio, não um vermelho de erro.</p>
+            </div>
+          </div>
+        </header>
+
+        <p class="micro-label">Fundação</p>
+        <div class="swatch-grid swatch-grid-foundation">
+          <button class="swatch swatch-wide" type="button" data-copy="#F4F3ED" aria-label="Copiar cor papel, F4F3ED">
+            <span class="swatch-chip" style="--swatch:var(--paper)" data-token="--paper"></span>
+            <span class="swatch-info"><strong>Papel</strong><code>#F4F3ED</code><span>fundo, respiro</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#151611" aria-label="Copiar cor tinta, 151611">
+            <span class="swatch-chip" style="--swatch:var(--ink)" data-token="--ink"></span>
+            <span class="swatch-info"><strong>Tinta</strong><code>#151611</code><span>texto principal</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#2438E8" aria-label="Copiar cor ultramar, 2438E8">
+            <span class="swatch-chip" style="--swatch:var(--brand)" data-token="--brand"></span>
+            <span class="swatch-info"><strong>Ultramar</strong><code>#2438E8</code><span>ação, link, foco</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#A9503B" aria-label="Copiar cor barro, A9503B">
+            <span class="swatch-chip" style="--swatch:var(--accent)" data-token="--accent"></span>
+            <span class="swatch-info"><strong>Barro</strong><code>#A9503B</code><span>acento raro; direita</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#8B887B" aria-label="Copiar cor pedra, 8B887B">
+            <span class="swatch-chip" style="--swatch:var(--bias-center)" data-token="--bias-center"></span>
+            <span class="swatch-info"><strong>Pedra</strong><code>#8B887B</code><span>centro</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#D8D5C8" aria-label="Copiar cor régua, D8D5C8">
+            <span class="swatch-chip" style="--swatch:var(--rule)" data-token="--rule"></span>
+            <span class="swatch-info"><strong>Régua</strong><code>#D8D5C8</code><span>fios, estrutura</span></span>
+          </button>
+        </div>
+
+        <p class="micro-label micro-label-spaced">Dados</p>
+        <div class="swatch-grid swatch-grid-data">
+          <button class="swatch" type="button" data-copy="#3F5FA8" aria-label="Copiar cor esquerda, 3F5FA8">
+            <span class="swatch-chip" style="--swatch:var(--bias-left)" data-token="--bias-left"></span>
+            <span class="swatch-info"><strong>Esquerda</strong><code>#3F5FA8</code><span>dado</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#8B887B" aria-label="Copiar cor centro, 8B887B">
+            <span class="swatch-chip" style="--swatch:var(--bias-center)" data-token="--bias-center"></span>
+            <span class="swatch-info"><strong>Centro</strong><code>#8B887B</code><span>dado</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#A9503B" aria-label="Copiar cor direita, A9503B">
+            <span class="swatch-chip" style="--swatch:var(--accent)" data-token="--accent"></span>
+            <span class="swatch-info"><strong>Direita</strong><code>#A9503B</code><span>dado</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#C6C2B4" aria-label="Copiar cor sem avaliação, C6C2B4">
+            <span class="swatch-chip" style="--swatch:var(--bias-unknown)" data-token="--bias-unknown"></span>
+            <span class="swatch-info"><strong>Sem avaliação</strong><code>#C6C2B4</code><span>desconhecido</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#2F6B4F" aria-label="Copiar cor factualidade alta, 2F6B4F">
+            <span class="swatch-chip" style="--swatch:var(--fact-high)" data-token="--fact-high"></span>
+            <span class="swatch-info"><strong>Alta</strong><code>#2F6B4F</code><span>factualidade</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#7E5714" aria-label="Copiar cor factualidade mista, 7E5714">
+            <span class="swatch-chip" style="--swatch:var(--fact-mixed)" data-token="--fact-mixed"></span>
+            <span class="swatch-info"><strong>Mista</strong><code>#7E5714</code><span>factualidade</span></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#A33A32" aria-label="Copiar cor factualidade baixa, A33A32">
+            <span class="swatch-chip" style="--swatch:var(--fact-low)" data-token="--fact-low"></span>
+            <span class="swatch-info"><strong>Baixa</strong><code>#A33A32</code><span>factualidade</span></span>
+          </button>
+        </div>
+
+        <div class="contrast-table-wrap">
+          <table class="contrast-table">
+            <caption>Contraste no tema claro (papel #F4F3ED)</caption>
+            <thead><tr><th scope="col">Combinação</th><th scope="col">Ratio</th><th scope="col">Uso</th></tr></thead>
+            <tbody>
+              <tr><td>Tinta / papel</td><td><span class="ratio">16.36</span></td><td>Texto principal</td></tr>
+              <tr><td>Muted / papel</td><td><span class="ratio">4.69</span></td><td>Metadados e legendas</td></tr>
+              <tr><td>Ultramar / papel</td><td><span class="ratio">6.73</span></td><td>Links e ação</td></tr>
+              <tr><td>Pedra / papel</td><td><span class="ratio">3.20</span></td><td>Somente dados e fios; nunca texto pequeno</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rule-callout">
+          <p><strong>Regra de ouro:</strong> se a cor desaparecer, a informação ainda precisa existir. Todo dado tem rótulo, e todo rótulo tem número.</p>
+        </div>
+      </section>
+
+      <section class="section" id="espaco" aria-labelledby="espaco-title">
+        <header class="section-head">
+          <div class="horizon" aria-hidden="true"></div>
+          <div class="section-head-grid">
+            <p class="section-label">Espaço &amp; grade</p>
+            <div class="section-head-copy">
+              <h2 id="espaco-title">O ritmo é a assinatura.</h2>
+              <p class="section-lede">Base de 4 px, escala curta e muito respiro entre blocos. A composição preferida é 7 + 4 + 1: leitura, evidência, silêncio. Dados podem ocupar a lateral; nunca invadem a medida do texto.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="space-grid">
+          <div class="space-list" aria-label="Escala de espaçamento">
+            <div class="space-row"><code>--space-1</code><span class="space-bar" style="width:4px"></span><span>4</span></div>
+            <div class="space-row"><code>--space-2</code><span class="space-bar" style="width:8px"></span><span>8</span></div>
+            <div class="space-row"><code>--space-3</code><span class="space-bar" style="width:12px"></span><span>12</span></div>
+            <div class="space-row"><code>--space-4</code><span class="space-bar" style="width:16px"></span><span>16</span></div>
+            <div class="space-row"><code>--space-6</code><span class="space-bar" style="width:24px"></span><span>24</span></div>
+            <div class="space-row"><code>--space-8</code><span class="space-bar" style="width:32px"></span><span>32</span></div>
+            <div class="space-row"><code>--space-12</code><span class="space-bar" style="width:48px"></span><span>48</span></div>
+            <div class="space-row"><code>--space-16</code><span class="space-bar" style="width:64px"></span><span>64</span></div>
+            <div class="space-row"><code>--space-24</code><span class="space-bar" style="width:96px"></span><span>96</span></div>
+            <div class="space-row"><code>--space-32</code><span class="space-bar" style="width:128px"></span><span>128</span></div>
+            <div class="space-row"><code>--space-40</code><span class="space-bar" style="width:160px"></span><span>160</span></div>
+          </div>
+          <div class="grid-demo-wrap">
+            <div class="grid-demo" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="grid-annotation"><span class="grid-annotation-line"></span><span>7 colunas de leitura · 4 de evidência · 1 de respiro</span></div>
+            <p class="micro-note">12 colunas, gutter fluido, container máximo de 1440 px. A coluna de leitura fica entre 58 e 68 caracteres.</p>
+          </div>
+        </div>
+
+        <div class="foundation-row">
+          <div class="foundation-block">
+            <p class="micro-label">Raios</p>
+            <div class="radius-row">
+              <span class="radius-sample" style="border-radius:2px">2</span>
+              <span class="radius-sample" style="border-radius:4px">4</span>
+              <span class="radius-sample" style="border-radius:8px">8</span>
+              <span class="radius-sample radius-sample-round" style="border-radius:999px">pill</span>
+            </div>
+            <p class="micro-note">2 px em superfícies editoriais, 8 px em menus, pill apenas em tags.</p>
+          </div>
+          <div class="foundation-block">
+            <p class="micro-label">Elevação</p>
+            <div class="shadow-demo"><span class="shadow-demo-dot"></span>Menu flutuante</div>
+            <p class="micro-note">Sombra só para o que flutua. Conteúdo se separa por fio e espaço, não por sombra.</p>
+          </div>
+          <div class="foundation-block">
+            <p class="micro-label">Movimento</p>
+            <div class="motion-row">
+              <span class="motion-chip">140 ms</span>
+              <span class="motion-chip">220 ms</span>
+              <span class="motion-chip">420 ms</span>
+            </div>
+            <p class="micro-note">Hover responde em 140 ms; estados em 220 ms; uma entrada orquestrada em 420 ms. Tudo desliga com <code>prefers-reduced-motion</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="componentes" aria-labelledby="comp-title">
+        <header class="section-head">
+          <div class="horizon" aria-hidden="true"></div>
+          <div class="section-head-grid">
+            <p class="section-label">Componentes</p>
+            <div class="section-head-copy">
+              <h2 id="comp-title">Peças com a mesma gramática.</h2>
+              <p class="section-lede">Botões, campos, tags, fontes, histórias e gráficos. A hierarquia se resolve por escala e espaço; o fio faz o trabalho que o card faria.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="component-group">
+          <div class="component-head">
+            <h3>Botões</h3>
+            <p>Primário em tinta, hover em ultramar. Secundário é fio; ghost é texto. Pressão escala para 96%.</p>
+          </div>
+          <div class="specimen-surface">
+            <div class="button-row">
+              <button class="btn btn-primary" type="button">Ler o relance <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+              <button class="btn btn-secondary" type="button">Salvar</button>
+              <button class="btn btn-ghost" type="button">Compartilhar</button>
+              <button class="btn btn-danger" type="button">Remover</button>
+              <button class="btn btn-primary" type="button" disabled>Indisponível</button>
+              <button class="btn btn-secondary" type="button" aria-busy="true"><span class="spinner" aria-hidden="true"></span>Gerando…</button>
+            </div>
+            <div class="button-row button-row-spaced">
+              <button class="btn btn-primary btn-sm" type="button">Pequeno</button>
+              <button class="btn btn-primary" type="button">Médio</button>
+              <button class="btn btn-primary btn-lg" type="button">Grande</button>
+              <button class="icon-btn" type="button" aria-label="Buscar"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button>
+              <button class="icon-btn" type="button" aria-label="Filtrar"><svg class="icon" aria-hidden="true"><use href="#i-filter"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-group">
+          <div class="component-head">
+            <h3>Campos</h3>
+            <p>Label sempre visível; foco com anel de marca; erro com ícone e texto, não só cor.</p>
+          </div>
+          <div class="specimen-surface">
+            <div class="field-grid">
+              <div class="field">
+                <label for="ds-search">Buscar um tema</label>
+                <div class="input-wrap">
+                  <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+                  <input id="ds-search" type="search" placeholder="Ex.: regulação da IA">
+                </div>
+                <p class="field-help">Use palavras-chave ou cole um link de matéria.</p>
+              </div>
+              <div class="field">
+                <label for="ds-email">E-mail</label>
+                <input id="ds-email" type="email" value="leitor@exemplo.com" aria-invalid="true" aria-describedby="ds-email-error">
+                <p class="field-error" id="ds-email-error"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>Este e-mail já está em uso.</p>
+              </div>
+              <div class="field">
+                <label for="ds-country">País</label>
+                <div class="select-wrap">
+                  <select id="ds-country">
+                    <option>Brasil</option>
+                    <option>Estados Unidos</option>
+                    <option>Portugal</option>
+                  </select>
+                  <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+                </div>
+              </div>
+              <div class="field">
+                <label for="ds-window">Janela de cobertura</label>
+                <div class="select-wrap">
+                  <select id="ds-window">
+                    <option>Últimos 7 dias</option>
+                    <option>Últimos 30 dias</option>
+                    <option>Últimos 3 meses</option>
+                  </select>
+                  <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+                </div>
+              </div>
+              <div class="field field-full">
+                <label for="ds-note">Nota para o relance</label>
+                <textarea id="ds-note" placeholder="O que você quer entender sobre esta cobertura?">Quero entender por que o custo aparece de formas tão diferentes nas manchetes.</textarea>
+              </div>
+            </div>
+            <div class="control-row">
+              <label class="check"><input type="checkbox" checked> Incluir fontes sem avaliação</label>
+              <label class="check"><input type="radio" name="ds-scope" checked> Todos os veículos</label>
+              <label class="check"><input type="radio" name="ds-scope"> Só veículos avaliados</label>
+              <label class="switch"><input type="checkbox" role="switch" checked><span class="switch-track" aria-hidden="true"></span><span>Modo leitura</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-group">
+          <div class="component-head">
+            <h3>Tags</h3>
+            <p>Cor + forma + texto. O ponto marca o espectro; o quadrado marca factualidade. “Sem avaliação” é um círculo vazio.</p>
+          </div>
+          <div class="specimen-surface">
+            <div class="tag-row">
+              <span class="tag tag-left"><span class="tag-dot"></span>Esquerda</span>
+              <span class="tag tag-center"><span class="tag-dot"></span>Centro</span>
+              <span class="tag tag-right"><span class="tag-dot"></span>Direita</span>
+              <span class="tag tag-unknown"><span class="tag-dot"></span>Sem avaliação</span>
+            </div>
+            <div class="tag-row tag-row-spaced">
+              <span class="tag tag-fact-high"><span class="tag-square"></span>Factualidade alta</span>
+              <span class="tag tag-fact-mixed"><span class="tag-square"></span>Mista</span>
+              <span class="tag tag-fact-low"><span class="tag-square"></span>Baixa</span>
+              <span class="tag tag-unknown"><span class="tag-square"></span>Sem avaliação</span>
+            </div>
+            <div class="tag-row tag-row-spaced">
+              <span class="tag tag-sm tag-left"><span class="tag-dot"></span>Esquerda</span>
+              <span class="tag tag-sm tag-fact-high"><span class="tag-square"></span>Alta</span>
+              <span class="tag tag-sm">3 artigos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-group">
+          <div class="component-head">
+            <h3>Fontes</h3>
+            <p>Uma linha por veículo. Nome é o link; o ícone externo avisa que a leitura continua no site original.</p>
+          </div>
+          <div class="specimen-surface specimen-surface-flush">
+            <div class="source-table">
+              <div class="source-head" aria-hidden="true">
+                <span>Veículo</span><span>Viés</span><span>Factualidade</span><span class="source-count">Artigos</span><span></span>
+              </div>
+              <div class="source-row">
+                <div class="source-name"><a href="#">Agência Farol</a><span>agenciafarol.com.br · independente</span></div>
+                <span class="tag tag-left"><span class="tag-dot"></span>Esquerda</span>
+                <span class="tag tag-fact-high"><span class="tag-square"></span>Alta</span>
+                <span class="source-count">24</span>
+                <a class="source-link" href="#" aria-label="Abrir matéria da Agência Farol"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
+              <div class="source-row">
+                <div class="source-name"><a href="#">Jornal do Meio</a><span>jornaldomeio.com.br · grupo familiar</span></div>
+                <span class="tag tag-center"><span class="tag-dot"></span>Centro</span>
+                <span class="tag tag-fact-high"><span class="tag-square"></span>Alta</span>
+                <span class="source-count">31</span>
+                <a class="source-link" href="#" aria-label="Abrir matéria do Jornal do Meio"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
+              <div class="source-row">
+                <div class="source-name"><a href="#">Rede Sul</a><span>redesul.com · fundo de investimento</span></div>
+                <span class="tag tag-right"><span class="tag-dot"></span>Direita</span>
+                <span class="tag tag-fact-mixed"><span class="tag-square"></span>Mista</span>
+                <span class="source-count">18</span>
+                <a class="source-link" href="#" aria-label="Abrir matéria da Rede Sul"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
+              <div class="source-row">
+                <div class="source-name"><a href="#">Boletim Norte</a><span>boletimnorte.com · sem avaliação</span></div>
+                <span class="tag tag-unknown"><span class="tag-dot"></span>Sem avaliação</span>
+                <span class="tag tag-unknown"><span class="tag-square"></span>Sem avaliação</span>
+                <span class="source-count">7</span>
+                <a class="source-link" href="#" aria-label="Abrir matéria do Boletim Norte"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-group">
+          <div class="component-head">
+            <h3>Histórias</h3>
+            <p>Um card editorial, sem sombra. O fio muda no hover; o título ganha sublinhado. A barra de viés é o resumo visual.</p>
+          </div>
+          <div class="story-grid">
+            <article class="story-card">
+              <div class="story-meta"><span class="tag tag-center"><span class="tag-dot"></span>Centro</span><span>Há 12 min</span></div>
+              <h3><a href="#">A tarifa de energia entrou em consulta. Cada lado escolheu um número.</a></h3>
+              <p class="standfirst">A cobertura mudou de foco três vezes em uma semana. O que ficou de fora foi o cálculo que afeta quem está na ponta.</p>
+              <div class="bias-chart" data-bias-chart data-values="42,31,21,6" data-total="128">
+                <div class="bias-bar" data-bias-bar role="img" aria-label="Distribuição de 128 artigos por viés: 42% esquerda, 31% centro, 21% direita, 6% sem avaliação."></div>
+                <ul class="bias-legend" data-bias-legend></ul>
+              </div>
+              <div class="story-foot"><span>128 artigos · 64 veículos</span><span>6% sem avaliação</span></div>
+            </article>
+            <article class="story-card story-card-compact">
+              <div class="story-meta"><span class="tag tag-right"><span class="tag-dot"></span>Direita</span><span>Há 34 min</span></div>
+              <h3><a href="#">O que a cobertura de tecnologia não perguntou sobre o data center</a></h3>
+              <p class="standfirst">A pauta dominante é energia. A pergunta sobre água apareceu em 4 de 96 artigos.</p>
+              <div class="bias-chart" data-bias-chart data-values="18,29,47,6" data-total="96">
+                <div class="bias-bar" data-bias-bar role="img" aria-label="Distribuição de 96 artigos por viés: 18% esquerda, 29% centro, 47% direita, 6% sem avaliação."></div>
+                <ul class="bias-legend" data-bias-legend></ul>
+              </div>
+              <div class="story-foot"><span>96 artigos · 41 veículos</span><span>4 menções a água</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="component-group">
+          <div class="component-head">
+            <h3>Gráficos</h3>
+            <p>Primeiro o N, depois a forma. Barra para distribuição, dispersão para posição, linha para tempo. Sem donut, sem 3D.</p>
+          </div>
+          <div class="chart-grid">
+            <div class="chart-card">
+              <div class="chart-head"><span class="chart-title">Espectro da cobertura</span><span class="chart-sub">128 artigos</span></div>
+              <div class="bias-chart" data-bias-chart data-values="42,31,21,6" data-total="128">
+                <div class="bias-bar" data-bias-bar role="img" aria-label="Distribuição de 128 artigos por viés: 42% esquerda, 31% centro, 21% direita, 6% sem avaliação."></div>
+                <ul class="bias-legend" data-bias-legend></ul>
+              </div>
+              <p class="chart-note">Contagem por artigo, não por veículo. Um veículo com 20 artigos não vale 20 vezes.</p>
+            </div>
+            <div class="chart-card">
+              <div class="chart-head"><span class="chart-title">Factualidade das fontes</span><span class="chart-sub">128 artigos</span></div>
+              <div class="fact-chart" data-fact-chart data-values="46,38,9,7" data-total="128">
+                <div class="fact-bar" data-fact-bar role="img" aria-label="Factualidade: 46% alta, 38% mista, 9% baixa, 7% sem avaliação."></div>
+                <ul class="fact-legend" data-fact-legend></ul>
+              </div>
+              <p class="chart-note">Avaliação no nível do veículo, agregada por artigo. “Sem avaliação” não é “baixa”.</p>
+            </div>
+            <figure class="chart-card chart-card-wide" data-scatter>
+              <figcaption class="chart-head"><span class="chart-title">Viés × factualidade</span><span class="chart-sub">64 veículos</span></figcaption>
+              <div class="scatter-wrap">
+                <svg class="scatter-svg" data-scatter-svg role="img" aria-label="Dispersão de veículos avaliados: eixo horizontal de esquerda a direita; eixo vertical de factualidade baixa a alta. O tamanho do ponto indica volume de artigos."></svg>
+                <div class="chart-tip" data-chart-tip role="status" aria-live="polite"></div>
+              </div>
+              <div class="chart-legend" aria-hidden="true">
+                <span><i class="legend-dot" style="background:var(--bias-left)"></i>Esquerda</span>
+                <span><i class="legend-dot" style="background:var(--bias-center)"></i>Centro</span>
+                <span><i class="legend-dot" style="background:var(--bias-right)"></i>Direita</span>
+              </div>
+              <p class="chart-note">Tamanho do ponto = volume de artigos. Posições próximas do centro não significam “melhor”; significam apenas menos inclinação medida. Veículos sem avaliação ficam fora do gráfico.</p>
+              <div class="visually-hidden">
+                <table>
+                  <caption>Resumo dos veículos no gráfico de dispersão</caption>
+                  <thead><tr><th>Veículo</th><th>Viés</th><th>Factualidade</th><th>Artigos</th></tr></thead>
+                  <tbody>
+                    <tr><td>Agência Farol</td><td>Esquerda</td><td>Alta</td><td>24</td></tr>
+                    <tr><td>Jornal do Meio</td><td>Centro</td><td>Alta</td><td>31</td></tr>
+                    <tr><td>Rede Sul</td><td>Direita</td><td>Mista</td><td>18</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+            <figure class="chart-card chart-card-wide" data-timeline>
+              <figcaption class="chart-head"><span class="chart-title">Volume de cobertura</span><span class="chart-sub">Últimos 14 dias</span></figcaption>
+              <svg class="timeline-svg" data-timeline-svg role="img" aria-label="Linhas de volume de cobertura por espectro ao longo de 14 dias. A cobertura de esquerda e centro cresce no dia 8; a de direita cresce no dia 11."></svg>
+              <div class="chart-legend" aria-hidden="true">
+                <span><i class="legend-dot" style="background:var(--bias-left)"></i>Esquerda</span>
+                <span><i class="legend-dot" style="background:var(--bias-center)"></i>Centro</span>
+                <span><i class="legend-dot" style="background:var(--bias-right)"></i>Direita</span>
+              </div>
+              <p class="chart-note">Contagem diária de artigos. Picos não são “verdade”; são atenção editorial.</p>
+            </figure>
+          </div>
+          <div class="notice notice-warning">
+            <svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>
+            <p><strong>Amostra pequena.</strong> 12 artigos é pouco para afirmar um padrão. O gráfico continua visível, mas a leitura precisa de cautela.</p>
+          </div>
+        </div>
+
+        <div class="component-group">
+          <div class="component-head">
+            <h3>Relance de IA</h3>
+            <p>O texto interpreta; os números são calculados. Toda afirmação tem citação; as limitações ficam visíveis.</p>
+          </div>
+          <div class="report">
+            <div class="report-head">
+              <h3 class="report-title">O relance</h3>
+              <p class="report-meta"><span>128 artigos</span><span>64 veículos</span><span>Atualizado há 12 min</span></p>
+            </div>
+            <h3>O que aconteceu</h3>
+            <p>A consulta pública sobre a tarifa de energia recebeu 1.840 contribuições em cinco dias. A maior parte dos artigos cobriu o prazo e o volume de participação; uma minoria abriu o cálculo que liga o reajuste ao custo de transmissão.<sup><a href="#fonte-1" id="ref-1">1</a></sup></p>
+            <p>O número que aparece nas manchetes varia: 8,4%, 9,1% e “até 12%”. A diferença não é erro de reportagem; é escolha de base de cálculo.<sup><a href="#fonte-2" id="ref-2">2</a></sup></p>
+            <h3>Como cada lado enquadra</h3>
+            <p><strong>Esquerda:</strong> o foco é o efeito sobre a conta de quem consome menos energia. <strong>Centro:</strong> o foco é o rito da consulta e a judicialização. <strong>Direita:</strong> o foco é o custo para o setor e a “falta de previsibilidade”.<sup><a href="#fonte-3" id="ref-3">3</a></sup></p>
+            <div class="callout">
+              <p class="callout-label">O que ficou de fora</p>
+              <p class="callout-title">O impacto sobre a tarifa social apareceu em 4 de 128 artigos.</p>
+              <p class="callout-body">Não é uma ausência absoluta: quatro veículos mencionaram o programa. Mas nenhum deles colocou o número na manchete. O ângulo existe; a hierarquia o deixou no rodapé.</p>
+            </div>
+            <h3>Limitações</h3>
+            <p>Seis por cento dos artigos vêm de veículos sem avaliação de viés. A amostra é de 128 artigos; não representa toda a produção jornalística sobre o tema. O relance descreve a cobertura, não a realidade.</p>
+            <p class="report-footnote">Fontes e critérios ao final. Números calculados a partir da amostra; texto gerado com citações verificáveis.</p>
+          </div>
+        </div>
+
+        <div class="component-group">
+          <div class="component-head">
+            <h3>Estados</h3>
+            <p>Vazio é convite; carregando mantém a geometria; erro diz o que fazer.</p>
+          </div>
+          <div class="state-grid">
+            <div class="empty-state">
+              <span class="empty-mark" aria-hidden="true">—</span>
+              <h3>Nenhum artigo com avaliação de viés</h3>
+              <p>Os 7 artigos encontrados vêm de veículos que ainda não têm avaliação. Você pode incluí-los mesmo assim ou ampliar a busca.</p>
+              <button class="btn btn-secondary btn-sm" type="button">Incluir fontes sem avaliação</button>
+            </div>
+            <div class="skeleton-card" role="status" aria-busy="true" aria-label="Carregando relance">
+              <div class="skeleton-line skeleton-w-30"></div>
+              <div class="skeleton-line skeleton-w-90"></div>
+              <div class="skeleton-line skeleton-w-80"></div>
+              <div class="skeleton-line skeleton-w-60"></div>
+              <div class="skeleton-line skeleton-w-70"></div>
+            </div>
+            <div class="error-state">
+              <svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>
+              <h3>Não foi possível gerar o relance</h3>
+              <p>A fonte demorou mais de 30 segundos para responder. Tente de novo ou reduza a janela de cobertura.</p>
+              <button class="btn btn-secondary btn-sm" type="button">Tentar de novo</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="padroes" aria-labelledby="padroes-title">
+        <header class="section-head">
+          <div class="horizon" aria-hidden="true"></div>
+          <div class="section-head-grid">
+            <p class="section-label">Padrões</p>
+            <div class="section-head-copy">
+              <h2 id="padroes-title">O sistema em uso.</h2>
+              <p class="section-lede">Uma página de relance completa: manchete, leitura, evidência na lateral e fontes. A composição mostra como as peças se comportam juntas — e como a leitura continua sendo a protagonista.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="product-label">
+          <span>Prévia do produto</span>
+          <span>Conteúdo de demonstração · dados fictícios</span>
+        </div>
+
+        <div class="product-preview">
+          <div class="app-bar">
+            <a class="app-brand" href="#top" aria-label="Mirante — início">
+              <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+              <span>mirante</span>
+            </a>
+            <nav class="app-nav" aria-label="Navegação do app">
+              <a href="#" aria-current="page">Hoje</a>
+              <a href="#">Cobertura</a>
+              <a href="#">Fontes</a>
+            </nav>
+            <div class="app-actions">
+              <span class="app-search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Buscar tema</span>
+              <button class="btn btn-secondary btn-sm" type="button">Entrar</button>
+            </div>
+          </div>
+
+          <div class="product-body">
+            <nav class="crumbs" aria-label="Trilha">
+              <a href="#">Cobertura</a><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg><span>Energia</span>
+            </nav>
+
+            <header class="story-head">
+              <p class="story-kicker"><span>Energia</span><span>128 artigos</span><span>64 veículos</span><span>Atualizado há 12 min</span></p>
+              <h1>A tarifa de energia entrou em consulta. Cada lado escolheu um número.</h1>
+              <p class="story-lede">A cobertura mudou de foco três vezes em uma semana. O que ficou de fora foi o cálculo que afeta quem está na ponta.</p>
+              <div class="story-byline">
+                <span>Relance gerado a partir de 128 artigos</span>
+                <div class="story-actions">
+                  <button class="btn btn-secondary btn-sm" type="button" data-save-story aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg><span>Salvar</span></button>
+                  <button class="btn btn-ghost btn-sm" type="button" data-share-story><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg>Compartilhar</button>
+                </div>
+              </div>
+            </header>
+
+            <div class="story-layout">
+              <div class="story-main">
+                <div class="report report-plain">
+                  <div class="report-head">
+                    <h2 class="report-title">O relance</h2>
+                    <p class="report-meta"><span>128 artigos</span><span>64 veículos</span><span>Atualizado há 12 min</span></p>
+                  </div>
+                  <p class="report-opening">A consulta pública sobre a tarifa de energia recebeu 1.840 contribuições em cinco dias. A maior parte dos artigos cobriu o prazo e o volume de participação; uma minoria abriu o cálculo que liga o reajuste ao custo de transmissão.<sup><a href="#fonte-1">1</a></sup></p>
+                  <h3>O que aconteceu</h3>
+                  <p>O número que aparece nas manchetes varia: 8,4%, 9,1% e “até 12%”. A diferença não é erro de reportagem; é escolha de base de cálculo.<sup><a href="#fonte-2">2</a></sup> Quem usa a tarifa média chega a um valor; quem usa a parcela de transmissão chega a outro.</p>
+                  <p>A cobertura de esquerda abriu com o efeito na conta de quem consome menos energia. A de centro abriu com o rito da consulta. A de direita abriu com o custo para o setor. Nenhum dos três enquadramentos é falso; cada um escolheu uma porta de entrada.</p>
+                  <h3>Como cada lado enquadra</h3>
+                  <p><strong>Esquerda.</strong> O foco é o consumidor de baixa renda e a tarifa social. A palavra “justiça” aparece em 38% dos textos; “custo” aparece em 12%.<sup><a href="#fonte-3">3</a></sup></p>
+                  <p><strong>Centro.</strong> O foco é o procedimento: prazos, contribuições, judicialização. A cobertura é a mais descritiva e a que menos cita números de impacto.</p>
+                  <p><strong>Direita.</strong> O foco é a previsibilidade e o custo para o setor. “Intervenção” aparece em 41% dos textos; “tarifa social” não aparece em nenhum.<sup><a href="#fonte-4">4</a></sup></p>
+                  <div class="callout">
+                    <p class="callout-label">O que ficou de fora</p>
+                    <p class="callout-title">O impacto sobre a tarifa social apareceu em 4 de 128 artigos.</p>
+                    <p class="callout-body">Não é uma ausência absoluta: quatro veículos mencionaram o programa. Mas nenhum deles colocou o número na manchete. O ângulo existe; a hierarquia o deixou no rodapé.</p>
+                  </div>
+                  <h3>Limitações</h3>
+                  <p>Seis por cento dos artigos vêm de veículos sem avaliação de viés. A amostra é de 128 artigos; não representa toda a produção jornalística sobre o tema. O relance descreve a cobertura, não a realidade.</p>
+                  <p class="report-footnote">Fontes e critérios ao final. Números calculados a partir da amostra; texto gerado com citações verificáveis.</p>
+                </div>
+
+                <section class="sources-block" aria-labelledby="fontes-title">
+                  <div class="sources-head">
+                    <h2 id="fontes-title">Fontes nesta cobertura</h2>
+                    <span>64 veículos · 128 artigos</span>
+                  </div>
+                  <div class="source-table">
+                    <div class="source-row">
+                      <div class="source-name"><a href="#" id="fonte-1">Agência Farol</a><span>agenciafarol.com.br · independente</span></div>
+                      <span class="tag tag-left"><span class="tag-dot"></span>Esquerda</span>
+                      <span class="tag tag-fact-high"><span class="tag-square"></span>Alta</span>
+                      <span class="source-count">24</span>
+                      <a class="source-link" href="#" aria-label="Abrir matéria da Agência Farol"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+                    </div>
+                    <div class="source-row">
+                      <div class="source-name"><a href="#" id="fonte-2">Jornal do Meio</a><span>jornaldomeio.com.br · grupo familiar</span></div>
+                      <span class="tag tag-center"><span class="tag-dot"></span>Centro</span>
+                      <span class="tag tag-fact-high"><span class="tag-square"></span>Alta</span>
+                      <span class="source-count">31</span>
+                      <a class="source-link" href="#" aria-label="Abrir matéria do Jornal do Meio"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+                    </div>
+                    <div class="source-row">
+                      <div class="source-name"><a href="#" id="fonte-3">Rede Sul</a><span>redesul.com · fundo de investimento</span></div>
+                      <span class="tag tag-right"><span class="tag-dot"></span>Direita</span>
+                      <span class="tag tag-fact-mixed"><span class="tag-square"></span>Mista</span>
+                      <span class="source-count">18</span>
+                      <a class="source-link" href="#" aria-label="Abrir matéria da Rede Sul"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+                    </div>
+                    <div class="source-row">
+                      <div class="source-name"><a href="#" id="fonte-4">Boletim Norte</a><span>boletimnorte.com · sem avaliação</span></div>
+                      <span class="tag tag-unknown"><span class="tag-dot"></span>Sem avaliação</span>
+                      <span class="tag tag-unknown"><span class="tag-square"></span>Sem avaliação</span>
+                      <span class="source-count">7</span>
+                      <a class="source-link" href="#" aria-label="Abrir matéria do Boletim Norte"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <aside class="story-rail" aria-label="Evidências da cobertura">
+                <section class="rail-panel">
+                  <div class="chart-head"><h2 class="chart-title">Espectro</h2><span class="chart-sub">128 artigos</span></div>
+                  <div class="bias-chart" data-bias-chart data-values="42,31,21,6" data-total="128">
+                    <div class="bias-bar" data-bias-bar role="img" aria-label="Distribuição de 128 artigos por viés: 42% esquerda, 31% centro, 21% direita, 6% sem avaliação."></div>
+                    <ul class="bias-legend" data-bias-legend></ul>
+                  </div>
+                </section>
+                <section class="rail-panel">
+                  <div class="chart-head"><h2 class="chart-title">Factualidade</h2><span class="chart-sub">128 artigos</span></div>
+                  <div class="fact-chart" data-fact-chart data-values="46,38,9,7" data-total="128">
+                    <div class="fact-bar" data-fact-bar role="img" aria-label="Factualidade: 46% alta, 38% mista, 9% baixa, 7% sem avaliação."></div>
+                    <ul class="fact-legend" data-fact-legend></ul>
+                  </div>
+                </section>
+                <figure class="rail-panel" data-scatter>
+                  <figcaption class="chart-head"><h2 class="chart-title">Viés × factualidade</h2><span class="chart-sub">64 veículos</span></figcaption>
+                  <div class="scatter-wrap">
+                    <svg class="scatter-svg" data-scatter-svg role="img" aria-label="Dispersão de veículos por viés e factualidade. O tamanho do ponto indica volume de artigos."></svg>
+                    <div class="chart-tip" data-chart-tip role="status" aria-live="polite"></div>
+                  </div>
+                  <p class="chart-note">Tamanho = volume. Centro não é sinônimo de qualidade. Sem avaliação fica fora do gráfico.</p>
+                </figure>
+                <figure class="rail-panel" data-timeline>
+                  <figcaption class="chart-head"><h2 class="chart-title">Volume</h2><span class="chart-sub">14 dias</span></figcaption>
+                  <svg class="timeline-svg" data-timeline-svg role="img" aria-label="Volume de cobertura por espectro ao longo de 14 dias."></svg>
+                </figure>
+                <div class="rail-note">
+                  <p><strong>Como ler.</strong> Percentuais usam artigos, não veículos. Seis por cento não têm avaliação e ficam fora das barras coloridas.</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <div class="product-note">
+            <span>Demonstração · o conteúdo não descreve uma cobertura real.</span>
+            <span>128 artigos · 64 veículos · 12 min</span>
+          </div>
+        </div>
+
+        <div class="pattern-notes">
+          <div>
+            <p class="micro-label">Por que funciona</p>
+            <p>A manchete em Instrument Serif ancora a página; o relance em Literata mantém a leitura; os dados na lateral usam Schibsted. A coluna de texto nunca compete com a evidência.</p>
+          </div>
+          <div>
+            <p class="micro-label">Em 390 px</p>
+            <p>A lateral desce para depois do relance, os gráficos ocupam a largura toda e os botões viram ícones com rótulo acessível. A manchete cai para 40 px; a medida continua confortável.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tokens" aria-labelledby="tokens-title">
+        <header class="section-head">
+          <div class="horizon" aria-hidden="true"></div>
+          <div class="section-head-grid">
+            <p class="section-label">Tokens</p>
+            <div class="section-head-copy">
+              <h2 id="tokens-title">A fonte da verdade.</h2>
+              <p class="section-lede">CSS custom properties para o app em Rust + WebAssembly. Sem runtime de tema: o atributo <code>data-theme</code> no <code>&lt;html&gt;</code> troca os valores. O JSON existe para gerar código e sincronizar o Figma.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="token-layout">
+          <div class="code-shell">
+            <div class="code-head">
+              <span>tokens.css · trecho</span>
+              <button class="btn btn-secondary btn-sm" type="button" data-copy-target="#token-snippet"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>Copiar</button>
+            </div>
+            <pre class="code-block"><code id="token-snippet">:root {
+  --paper: #f4f3ed;
+  --ink: #151611;
+  --brand: #2438e8;
+  --bias-left: #3f5fa8;
+  --bias-center: #8b887b;
+  --bias-right: #a9503b;
+  --bias-unknown: #c6c2b4;
+  --text-body: 1.1875rem;
+  --leading-body: 1.66;
+  --measure: 66ch;
+  --radius-xs: 2px;
+  --duration-fast: 140ms;
+  --ease-out: cubic-bezier(.2, 0, 0, 1);
+}
+
+:root[data-theme="dark"] {
+  --paper: #11120f;
+  --ink: #f1efe6;
+  --brand: #8b9bff;
+  --bias-left: #8fa9e8;
+  --bias-center: #b5b1a3;
+  --bias-right: #d98b72;
+  --bias-unknown: #55564c;
+}</code></pre>
+          </div>
+          <div class="token-side">
+            <p class="micro-label">Baixar</p>
+            <a class="download-link" href="styles/tokens.css" download>tokens.css <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            <a class="download-link" href="data/tokens.json" download>tokens.json <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            <p class="micro-note">As fontes estão em <code>fonts/</code> e são self-hosted. O app não depende do Google Fonts em produção.</p>
+            <p class="micro-label micro-label-spaced">No app</p>
+            <p class="token-note">Importe <code>tokens.css</code> no root do frontend WASM. Use os aliases semânticos (<code>--bg-canvas</code>, <code>--text-primary</code>, <code>--border-subtle</code>) nos componentes; os tokens de dado (<code>--bias-*</code>) ficam restritos a gráficos e tags.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="acessibilidade" aria-labelledby="a11y-title">
+        <header class="section-head">
+          <div class="horizon" aria-hidden="true"></div>
+          <div class="section-head-grid">
+            <p class="section-label">Acessibilidade</p>
+            <div class="section-head-copy">
+              <h2 id="a11y-title">Bonito não é desculpa.</h2>
+              <p class="section-lede">WCAG 2.2 AA é o piso. Foco visível, contraste, alvo de toque, texto alternativo para gráficos e respeito a movimento reduzido não são acabamento; são parte do sistema.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="a11y-grid">
+          <div class="a11y-item">
+            <h3>Contraste</h3>
+            <p>Texto normal ≥ 4.5:1; texto grande ≥ 3:1. As cores de dado puras não são usadas como texto pequeno. “Sem avaliação” usa texto secundário, não o cinza claro.</p>
+          </div>
+          <div class="a11y-item">
+            <h3>Foco</h3>
+            <p>Todo controle tem <code>:focus-visible</code> com anel de 2 px e offset. Nunca remova o outline sem substituir por um estado de foco de contraste equivalente.</p>
+          </div>
+          <div class="a11y-item">
+            <h3>Alvo de toque</h3>
+            <p>44×44 px no mobile; 40×40 px em desktop denso. O ícone pode ser 18 px; a área clicável não.</p>
+          </div>
+          <div class="a11y-item">
+            <h3>Gráficos</h3>
+            <p>Cada gráfico tem resumo em <code>aria-label</code> e uma tabela oculta com os dados. A cor nunca é o único canal.</p>
+          </div>
+          <div class="a11y-item">
+            <h3>Movimento</h3>
+            <p>Uma entrada orquestrada por página. <code>prefers-reduced-motion</code> desliga animações e transições. Teclado nunca anima.</p>
+          </div>
+          <div class="a11y-item">
+            <h3>Leitura</h3>
+            <p>Medida de 58–68 caracteres; zoom de 200% sem perda; idioma do documento declarado; trechos em outra língua com <code>lang</code>.</p>
+          </div>
+        </div>
+
+        <div class="a11y-demo">
+          <p class="micro-label">Teste rápido</p>
+          <div class="a11y-demo-row">
+            <button class="btn btn-primary" type="button">Botão com foco</button>
+            <a class="link-quiet" href="#tokens">Link com foco</a>
+            <button class="icon-btn" type="button" aria-label="Buscar"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button>
+          </div>
+          <p class="micro-note">Use Tab para percorrer. O anel de foco é parte da identidade, não um detalhe do navegador.</p>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <strong>Mirante Design System</strong>
+          <span>v0.1 · outubro 2026</span>
+        </div>
+        <div class="footer-links">
+          <a href="#top">Voltar ao topo</a>
+          <a href="styles/tokens.css" download>Tokens CSS</a>
+          <a href="data/tokens.json" download>Tokens JSON</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script src="scripts/site.js"></script>
+</body>
+</html>

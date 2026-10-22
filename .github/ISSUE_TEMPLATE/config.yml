@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vulnerabilidade de segurança
+    url: https://github.com/gustavomello9600/mirante/security/advisories/new
+    about: Relate vulnerabilidades em canal privado. Não abra issue pública.
+  - name: Dúvidas e discussões
+    url: https://github.com/gustavomello9600/mirante/discussions
+    about: Para perguntas abertas, use as Discussions.
+  - name: Como contribuir
+    url: https://github.com/gustavomello9600/mirante/blob/main/CONTRIBUTING.md
+    about: Leia o guia antes de abrir um pull request.

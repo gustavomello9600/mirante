@@ -1,0 +1,54 @@
+[package]
+name = "mirante-web"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Interface web do Mirante, escrita em Rust e compilada para WebAssembly."
+authors = ["Mirante contributors"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/gustavomello9600/mirante"
+homepage = "https://github.com/gustavomello9600/mirante"
+keywords = ["news", "yew", "wasm", "web"]
+categories = ["web-programming", "wasm"]
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+yew = { version = "0.23", features = ["csr"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+gloo-net = { version = "0.7", features = ["http"] }
+gloo-timers = { version = "0.3", features = ["futures"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+js-sys = "0.3"
+console_error_panic_hook = "0.1"
+web-sys = { version = "0.3", features = [
+  "Window",
+  "Document",
+  "Element",
+  "HtmlElement",
+  "HtmlInputElement",
+  "HtmlFormElement",
+  "History",
+  "Location",
+  "Storage",
+  "Navigator",
+  "Clipboard",
+  "Event",
+  "EventTarget",
+  "SubmitEvent",
+  "InputEvent",
+  "KeyboardEvent",
+  "MouseEvent",
+  "HtmlTextAreaElement",
+  "HtmlDocument",
+  "Node"
+] }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1

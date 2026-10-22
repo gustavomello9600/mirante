@@ -1,0 +1,55 @@
+name: Feature request
+description: Proponha uma melhoria ou uma nova capacidade.
+title: "[feat]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de propor, leia PRODUCT.md e ARCHITECTURE.md. Mudanças grandes devem começar como uma issue de proposta.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema
+      description: Qual problema de leitor ou de operação esta proposta resolve?
+      placeholder: Hoje, quando..., não é possível...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      description: Descreva a solução e o comportamento esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: O que você já tentou ou descartou?
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Backend / API
+        - Frontend / interface
+        - Análise / clustering
+        - LLM / relance
+        - Design system
+        - Deploy / Docker
+        - Documentação
+        - Outro
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmações
+      options:
+        - label: Verifiquei que a proposta está alinhada aos princípios do PRODUCT.md.
+          required: true
+        - label: Procurei issues e discussões existentes.
+          required: true

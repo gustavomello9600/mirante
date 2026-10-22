@@ -1,0 +1,1440 @@
+{
+  "note": "Curadoria de demonstração do Mirante. Inclui veículos nacionais, regionais, especializados e políticos. Fontes oficiais, empresas e veículos sem posição editorial conhecida permanecem Sem avaliação; não atribuímos espectro sem base. Não é uma base licenciada de viés/factualidade. Em produção, substitua por AllSides, Ad Fontes, MBFC ou uma metodologia própria auditável.",
+  "sources": [
+    {
+      "name": "G1",
+      "domain": "g1.globo.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Globo"
+    },
+    {
+      "name": "O Globo",
+      "domain": "oglobo.globo.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Globo"
+    },
+    {
+      "name": "Valor Econômico",
+      "domain": "valor.globo.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Globo"
+    },
+    {
+      "name": "Folha de S.Paulo",
+      "domain": "folha.uol.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Folha"
+    },
+    {
+      "name": "UOL",
+      "domain": "uol.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Folha"
+    },
+    {
+      "name": "Estadão",
+      "domain": "estadao.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Estado"
+    },
+    {
+      "name": "CNN Brasil",
+      "domain": "cnnbrasil.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Novus Mídia"
+    },
+    {
+      "name": "BBC News Brasil",
+      "domain": "bbc.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "BBC"
+    },
+    {
+      "name": "Agência Brasil",
+      "domain": "agenciabrasil.ebc.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "EBC"
+    },
+    {
+      "name": "Poder360",
+      "domain": "poder360.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Independente"
+    },
+    {
+      "name": "Metrópoles",
+      "domain": "metropoles.com",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Grupo Metrópoles"
+    },
+    {
+      "name": "Correio Braziliense",
+      "domain": "correiobraziliense.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Diários Associados"
+    },
+    {
+      "name": "Exame",
+      "domain": "exame.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "BTG Pactual"
+    },
+    {
+      "name": "InfoMoney",
+      "domain": "infomoney.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "XP Inc."
+    },
+    {
+      "name": "Nexo Jornal",
+      "domain": "nexojornal.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Independente"
+    },
+    {
+      "name": "Aos Fatos",
+      "domain": "aosfatos.org",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Independente"
+    },
+    {
+      "name": "Congresso em Foco",
+      "domain": "congressoemfoco.uol.com.br",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Independente"
+    },
+    {
+      "name": "SBT News",
+      "domain": "sbtnews.sbt.com.br",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "SBT"
+    },
+    {
+      "name": "Terra",
+      "domain": "terra.com.br",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Grupo Terra"
+    },
+    {
+      "name": "Veja",
+      "domain": "veja.abril.com.br",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Grupo Abril"
+    },
+    {
+      "name": "Gazeta do Povo",
+      "domain": "gazetadopovo.com.br",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Grupo RIC"
+    },
+    {
+      "name": "Jovem Pan",
+      "domain": "jovempan.com.br",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Grupo Jovem Pan"
+    },
+    {
+      "name": "Revista Oeste",
+      "domain": "revistaoeste.com",
+      "lean": "right",
+      "factuality": "low",
+      "ownership": "Independente"
+    },
+    {
+      "name": "R7",
+      "domain": "r7.com",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Grupo Record"
+    },
+    {
+      "name": "Record News",
+      "domain": "recordtv.r7.com",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Grupo Record"
+    },
+    {
+      "name": "Brasil de Fato",
+      "domain": "brasildefato.com.br",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "Independente"
+    },
+    {
+      "name": "CartaCapital",
+      "domain": "cartacapital.com.br",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "Editora Confiança"
+    },
+    {
+      "name": "Revista Fórum",
+      "domain": "revistaforum.com.br",
+      "lean": "left",
+      "factuality": "mixed",
+      "ownership": "Independente"
+    },
+    {
+      "name": "Rede Brasil Atual",
+      "domain": "redebrasilatual.com.br",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "CUT"
+    },
+    {
+      "name": "Sul21",
+      "domain": "sul21.com.br",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "Independente"
+    },
+    {
+      "name": "The Intercept Brasil",
+      "domain": "intercept.com.br",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "Independente"
+    },
+    {
+      "name": "Agência Pública",
+      "domain": "apublica.org",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "Independente"
+    },
+    {
+      "name": "Reuters",
+      "domain": "reuters.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Thomson Reuters"
+    },
+    {
+      "name": "Associated Press",
+      "domain": "apnews.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Cooperative"
+    },
+    {
+      "name": "Agence France-Presse",
+      "domain": "afp.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Cooperative"
+    },
+    {
+      "name": "BBC",
+      "domain": "bbc.co.uk",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Public broadcaster"
+    },
+    {
+      "name": "Financial Times",
+      "domain": "ft.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Nikkei"
+    },
+    {
+      "name": "Bloomberg",
+      "domain": "bloomberg.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Bloomberg L.P."
+    },
+    {
+      "name": "Le Monde",
+      "domain": "lemonde.fr",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Groupe Le Monde"
+    },
+    {
+      "name": "DW",
+      "domain": "dw.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Public broadcaster"
+    },
+    {
+      "name": "Al Jazeera",
+      "domain": "aljazeera.com",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Qatar"
+    },
+    {
+      "name": "The Guardian",
+      "domain": "theguardian.com",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "Scott Trust"
+    },
+    {
+      "name": "The New York Times",
+      "domain": "nytimes.com",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "The New York Times Company"
+    },
+    {
+      "name": "The Washington Post",
+      "domain": "washingtonpost.com",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "Nash Holdings"
+    },
+    {
+      "name": "CNN",
+      "domain": "cnn.com",
+      "lean": "left",
+      "factuality": "mixed",
+      "ownership": "Warner Bros. Discovery"
+    },
+    {
+      "name": "The Wall Street Journal",
+      "domain": "wsj.com",
+      "lean": "right",
+      "factuality": "high",
+      "ownership": "News Corp"
+    },
+    {
+      "name": "Fox News",
+      "domain": "foxnews.com",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Fox Corporation"
+    },
+    {
+      "name": "El País",
+      "domain": "elpais.com",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "PRISA"
+    },
+    {
+      "name": "Nikkei Asia",
+      "domain": "asia.nikkei.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Nikkei"
+    },
+    {
+      "name": "RT",
+      "domain": "rt.com",
+      "lean": "unknown",
+      "factuality": "low",
+      "ownership": "Russian state"
+    },
+    {
+      "name": "Sputnik",
+      "domain": "sputniknews.com",
+      "lean": "unknown",
+      "factuality": "low",
+      "ownership": "Russian state"
+    },
+    {
+      "name": "China Daily",
+      "domain": "chinadaily.com.cn",
+      "lean": "unknown",
+      "factuality": "low",
+      "ownership": "Chinese state"
+    },
+    {
+      "name": "Globo",
+      "domain": "globo.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Globo"
+    },
+    {
+      "name": "EBC",
+      "domain": "ebc.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "EBC"
+    },
+    {
+      "name": "Band",
+      "domain": "band.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Bandeirantes"
+    },
+    {
+      "name": "SBT",
+      "domain": "sbt.com.br",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "SBT"
+    },
+    {
+      "name": "iG",
+      "domain": "ig.com.br",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Grupo iG"
+    },
+    {
+      "name": "Congresso em Foco",
+      "domain": "congressoemfoco.com.br",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Independente"
+    },
+    {
+      "name": "GZH",
+      "domain": "clicrbs.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo RBS"
+    },
+    {
+      "name": "Correio do Povo",
+      "domain": "correiodopovo.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Record"
+    },
+    {
+      "name": "O POVO",
+      "domain": "opovo.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo de Comunicação O POVO"
+    },
+    {
+      "name": "O TEMPO",
+      "domain": "otempo.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "SADA"
+    },
+    {
+      "name": "A TARDE",
+      "domain": "atarde.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo A TARDE"
+    },
+    {
+      "name": "Folha PE",
+      "domain": "folhape.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Folha de Pernambuco"
+    },
+    {
+      "name": "Jornal do Commercio",
+      "domain": "jc.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Sistema Jornal do Commercio"
+    },
+    {
+      "name": "Diario de Pernambuco",
+      "domain": "diariodepernambuco.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Diario de Pernambuco"
+    },
+    {
+      "name": "Estado de Minas",
+      "domain": "em.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Diários Associados"
+    },
+    {
+      "name": "Jornal de Brasília",
+      "domain": "jornaldebrasilia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal de Brasília"
+    },
+    {
+      "name": "Jornal do Brasil",
+      "domain": "jb.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal do Brasil"
+    },
+    {
+      "name": "DOL",
+      "domain": "dol.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo DOL"
+    },
+    {
+      "name": "A Crítica",
+      "domain": "acritica.net",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo A Crítica"
+    },
+    {
+      "name": "Amazonas Atual",
+      "domain": "amazonasatual.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Independente"
+    },
+    {
+      "name": "Capital News",
+      "domain": "capitalnews.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Capital News"
+    },
+    {
+      "name": "T1 Notícias",
+      "domain": "t1noticias.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "T1"
+    },
+    {
+      "name": "Folha Vitória",
+      "domain": "folhavitoria.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rede Folha Vitória"
+    },
+    {
+      "name": "ES Brasil",
+      "domain": "esbrasil.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "ES Brasil"
+    },
+    {
+      "name": "Jornal Opção",
+      "domain": "jornalopcao.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal Opção"
+    },
+    {
+      "name": "O Pantaneiro",
+      "domain": "opantaneiro.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "O Pantaneiro"
+    },
+    {
+      "name": "O Sul",
+      "domain": "osul.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "O Sul"
+    },
+    {
+      "name": "Jornal do Comércio",
+      "domain": "jornaldocomercio.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal do Comércio"
+    },
+    {
+      "name": "Correio da Manhã",
+      "domain": "correiodamanha.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Correio da Manhã"
+    },
+    {
+      "name": "Jornal Grande Bahia",
+      "domain": "jornalgrandebahia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal Grande Bahia"
+    },
+    {
+      "name": "Bahia Econômica",
+      "domain": "bahiaeconomica.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Bahia Econômica"
+    },
+    {
+      "name": "JOTA",
+      "domain": "jota.info",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "JOTA"
+    },
+    {
+      "name": "Migalhas",
+      "domain": "migalhas.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Migalhas"
+    },
+    {
+      "name": "Consultor Jurídico",
+      "domain": "conjur.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Conjur"
+    },
+    {
+      "name": "Forbes Brasil",
+      "domain": "forbes.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Forbes"
+    },
+    {
+      "name": "ISTOÉ DINHEIRO",
+      "domain": "istoedinheiro.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Abril"
+    },
+    {
+      "name": "BM&C News",
+      "domain": "bmcnews.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "BM&C"
+    },
+    {
+      "name": "Monitor Mercantil",
+      "domain": "monitormercantil.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Monitor Mercantil"
+    },
+    {
+      "name": "Panrotas",
+      "domain": "panrotas.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Panrotas"
+    },
+    {
+      "name": "Diário do Transporte",
+      "domain": "diariodotransporte.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Diário do Transporte"
+    },
+    {
+      "name": "Agrolink",
+      "domain": "agrolink.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Agrolink"
+    },
+    {
+      "name": "Notícias Agrícolas",
+      "domain": "noticiasagricolas.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Notícias Agrícolas"
+    },
+    {
+      "name": "Canal Solar",
+      "domain": "canalsolar.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Canal Solar"
+    },
+    {
+      "name": "Brasil Energia",
+      "domain": "brasilenergia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Brasil Energia"
+    },
+    {
+      "name": "Times Brasil | CNBC",
+      "domain": "timesbrasil.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Times Brasil"
+    },
+    {
+      "name": "Portal do Agronegócio",
+      "domain": "portaldoagronegocio.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Portal do Agronegócio"
+    },
+    {
+      "name": "Feed&Food",
+      "domain": "feedfood.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Feed&Food"
+    },
+    {
+      "name": "Portal Contábeis",
+      "domain": "contabeis.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Portal Contábeis"
+    },
+    {
+      "name": "Jornal Contábil",
+      "domain": "jornalcontabil.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal Contábil"
+    },
+    {
+      "name": "Brasil 247",
+      "domain": "brasil247.com",
+      "lean": "left",
+      "factuality": "mixed",
+      "ownership": "Brasil 247"
+    },
+    {
+      "name": "Brasil Paralelo",
+      "domain": "brasilparalelo.com.br",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Brasil Paralelo"
+    },
+    {
+      "name": "Instituto Liberal",
+      "domain": "institutoliberal.org.br",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Instituto Liberal"
+    },
+    {
+      "name": "PDT",
+      "domain": "pdt.org.br",
+      "lean": "left",
+      "factuality": "mixed",
+      "ownership": "Partido Democrático Trabalhista"
+    },
+    {
+      "name": "PT",
+      "domain": "pt.org.br",
+      "lean": "left",
+      "factuality": "mixed",
+      "ownership": "Partido dos Trabalhadores"
+    },
+    {
+      "name": "Jovem Pan News Litoral",
+      "domain": "jplitoral.com.br",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "Jovem Pan"
+    },
+    {
+      "name": "Misto Brasil",
+      "domain": "mistobrasil.com",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Independente"
+    },
+    {
+      "name": "A Notícia do Ceará",
+      "domain": "anoticiadoceara.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "A Notícia do Ceará"
+    },
+    {
+      "name": "A Terra e Redonda",
+      "domain": "aterraeredonda.com.br",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "A Terra e Redonda"
+    },
+    {
+      "name": "AM POST",
+      "domain": "ampost.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "AM POST"
+    },
+    {
+      "name": "Amazonas1",
+      "domain": "amazonas1.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Amazonas1"
+    },
+    {
+      "name": "BHAZ",
+      "domain": "bhaz.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "BHAZ"
+    },
+    {
+      "name": "Capivara News",
+      "domain": "capivaranews.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Capivara News"
+    },
+    {
+      "name": "DefesaNet",
+      "domain": "defesanet.com.br",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "DefesaNet"
+    },
+    {
+      "name": "Diário da Manhã",
+      "domain": "dm.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Diário da Manhã"
+    },
+    {
+      "name": "Enfoque MS",
+      "domain": "enfoquems.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Enfoque MS"
+    },
+    {
+      "name": "Grupo Lomes de Comunicação",
+      "domain": "glomes.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Grupo Lomes"
+    },
+    {
+      "name": "Jurinews",
+      "domain": "jurinews.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jurinews"
+    },
+    {
+      "name": "Meio News",
+      "domain": "meionews.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Meio News"
+    },
+    {
+      "name": "Política Etc",
+      "domain": "politicaetc.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Política Etc"
+    },
+    {
+      "name": "Ponte Jornalismo",
+      "domain": "ponte.org",
+      "lean": "left",
+      "factuality": "high",
+      "ownership": "Ponte Jornalismo"
+    },
+    {
+      "name": "Portal Rios de Notícias",
+      "domain": "riosdenoticias.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rios de Notícias"
+    },
+    {
+      "name": "Portal Terra da Luz",
+      "domain": "portalterradaluz.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Terra da Luz"
+    },
+    {
+      "name": "Portal VV8",
+      "domain": "portalvv8.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "VV8"
+    },
+    {
+      "name": "Rádio Itatiaia",
+      "domain": "itatiaia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rádio Itatiaia"
+    },
+    {
+      "name": "Rádio Metrópole",
+      "domain": "metro1.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rádio Metrópole"
+    },
+    {
+      "name": "Rede 98",
+      "domain": "rede98.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rede 98"
+    },
+    {
+      "name": "Termômetro da Política",
+      "domain": "termometrodapolitica.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Termômetro da Política"
+    },
+    {
+      "name": "Tribuna do Agreste",
+      "domain": "tribunadoagreste.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Tribuna do Agreste"
+    },
+    {
+      "name": "Varela Net",
+      "domain": "varelanet.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Varela Net"
+    },
+    {
+      "name": "Difusora Mossoró",
+      "domain": "difusoramossoro.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Difusora Mossoró"
+    },
+    {
+      "name": "NC News",
+      "domain": "ncnews.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "NC News"
+    },
+    {
+      "name": "Rádio Capinzal",
+      "domain": "capinzalfm.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rádio Capinzal"
+    },
+    {
+      "name": "PE Notícias",
+      "domain": "penoticias.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "PE Notícias"
+    },
+    {
+      "name": "Blog do Alberes Xavier",
+      "domain": "blogdoalberesxavier.com",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Independente"
+    },
+    {
+      "name": "O Fato Maringá",
+      "domain": "ofatomaringa.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "O Fato Maringá"
+    },
+    {
+      "name": "Varginha Online",
+      "domain": "varginhaonline.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Varginha Online"
+    },
+    {
+      "name": "Notícia de Limeira",
+      "domain": "noticiadelimeira.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Notícia de Limeira"
+    },
+    {
+      "name": "Jornal do Momento",
+      "domain": "domomento.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal do Momento"
+    },
+    {
+      "name": "Patos Online",
+      "domain": "patosonline.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Patos Online"
+    },
+    {
+      "name": "A Gazeta",
+      "domain": "agazeta.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rede Gazeta"
+    },
+    {
+      "name": "Jornal de Angola",
+      "domain": "jornaldeangola.ao",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Edições Novembro"
+    },
+    {
+      "name": "Folha Dirigida",
+      "domain": "folha.qconcursos.com",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Qconcursos"
+    },
+    {
+      "name": "24 HORAS MT",
+      "domain": "24horasmt.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "24 Horas MT"
+    },
+    {
+      "name": "Gazeta de São Paulo",
+      "domain": "gazetasp.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Gazeta de São Paulo"
+    },
+    {
+      "name": "Araguaia Notícia",
+      "domain": "araguaianoticia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Araguaia Notícia"
+    },
+    {
+      "name": "Rdnews",
+      "domain": "rdnews.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rdnews"
+    },
+    {
+      "name": "Portal O Dia",
+      "domain": "portalodia.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Portal O Dia"
+    },
+    {
+      "name": "Primeira Página",
+      "domain": "primeirapagina.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Primeira Página"
+    },
+    {
+      "name": "O Republicano",
+      "domain": "orepublicano.com.br",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "O Republicano"
+    },
+    {
+      "name": "Primeira Hora",
+      "domain": "primeirahora.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Primeira Hora"
+    },
+    {
+      "name": "Agora Litoral",
+      "domain": "agoralitoral.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Agora Litoral"
+    },
+    {
+      "name": "Chuville Notícias",
+      "domain": "chuville.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Chuville"
+    },
+    {
+      "name": "Radar Digital Brasília",
+      "domain": "radardigitalbrasilia.com",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Radar Digital"
+    },
+    {
+      "name": "PEBSP",
+      "domain": "pebsp.com",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "PEBSP"
+    },
+    {
+      "name": "Portal Radar",
+      "domain": "portalradar.com.br",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Portal Radar"
+    },
+    {
+      "name": "Paraíba Business",
+      "domain": "paraibabusiness.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Paraíba Business"
+    },
+    {
+      "name": "Tribuna do Sertão",
+      "domain": "tribunadosertao.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Tribuna do Sertão"
+    },
+    {
+      "name": "Agência iNFRA",
+      "domain": "agenciainfra.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Agência iNFRA"
+    },
+    {
+      "name": "THMais",
+      "domain": "thmais.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "THMais"
+    },
+    {
+      "name": "Gazeta Norte Mineira",
+      "domain": "gazetanm.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Gazeta Norte Mineira"
+    },
+    {
+      "name": "Notícia Já",
+      "domain": "noticiaja.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Notícia Já"
+    },
+    {
+      "name": "Revista LIDE",
+      "domain": "noticias.lide.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "LIDE"
+    },
+    {
+      "name": "Portal ERP",
+      "domain": "portalerp.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Portal ERP"
+    },
+    {
+      "name": "O Livre",
+      "domain": "olivre.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "O Livre"
+    },
+    {
+      "name": "Infonet",
+      "domain": "infonet.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Infonet"
+    },
+    {
+      "name": "Portal Agora Tocantins",
+      "domain": "agora-to.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Agora Tocantins"
+    },
+    {
+      "name": "Gazeta Rondônia",
+      "domain": "gazetarondonia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Gazeta Rondônia"
+    },
+    {
+      "name": "Campo Grande News",
+      "domain": "campograndenews.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Campo Grande News"
+    },
+    {
+      "name": "O Maringá",
+      "domain": "omaringa.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "O Maringá"
+    },
+    {
+      "name": "Marília Notícia",
+      "domain": "marilianoticia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Marília Notícia"
+    },
+    {
+      "name": "TV Sim Brasil",
+      "domain": "tvsimbrasil.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "TV Sim"
+    },
+    {
+      "name": "Jornal do Norte",
+      "domain": "portaljornaldonorte.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal do Norte"
+    },
+    {
+      "name": "Boqnews",
+      "domain": "boqnews.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Boqnews"
+    },
+    {
+      "name": "Atlas Público",
+      "domain": "atlaspublico.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Atlas Público"
+    },
+    {
+      "name": "Brasília Alta Frequência",
+      "domain": "bsbaltafrequencia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Brasília Alta Frequência"
+    },
+    {
+      "name": "Repórter Maceió",
+      "domain": "reportermaceio.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Repórter Maceió"
+    },
+    {
+      "name": "BNews SP",
+      "domain": "bnewssaopaulo.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "BNews"
+    },
+    {
+      "name": "Portal Piauí Hoje",
+      "domain": "piauihoje.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Piauí Hoje"
+    },
+    {
+      "name": "ES1",
+      "domain": "es1.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "ES1"
+    },
+    {
+      "name": "Jornal da USP",
+      "domain": "jornal.usp.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Universidade de São Paulo"
+    },
+    {
+      "name": "Paranaíba Mais",
+      "domain": "paranaibamais.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Paranaíba Mais"
+    },
+    {
+      "name": "O Brasilianista",
+      "domain": "obrasilianista.com.br",
+      "lean": "right",
+      "factuality": "mixed",
+      "ownership": "O Brasilianista"
+    },
+    {
+      "name": "Portal SCDN",
+      "domain": "saocarlosdiaenoite.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Portal SCDN"
+    },
+    {
+      "name": "Tribuna da Bahia",
+      "domain": "trbn.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Tribuna da Bahia"
+    },
+    {
+      "name": "Andravirtual",
+      "domain": "andravirtual.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Andravirtual"
+    },
+    {
+      "name": "Vrum",
+      "domain": "vrum.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Vrum"
+    },
+    {
+      "name": "AtaNews",
+      "domain": "atanews.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "AtaNews"
+    },
+    {
+      "name": "Rádio Difusora FM 95.3",
+      "domain": "difusora95.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Difusora"
+    },
+    {
+      "name": "Gazeta da Semana",
+      "domain": "gazetadasemana.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Gazeta da Semana"
+    },
+    {
+      "name": "DF Mobilidade",
+      "domain": "dfmobilidade.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "DF Mobilidade"
+    },
+    {
+      "name": "O Diário de Teresópolis",
+      "domain": "netdiario.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "O Diário de Teresópolis"
+    },
+    {
+      "name": "O Diário do Vale",
+      "domain": "odiariodovale.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "O Diário do Vale"
+    },
+    {
+      "name": "Diário do Comércio",
+      "domain": "diariodocomercio.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Diário do Comércio"
+    },
+    {
+      "name": "Folha Popular",
+      "domain": "folhapopular.info",
+      "lean": "center",
+      "factuality": "mixed",
+      "ownership": "Folha Popular"
+    },
+    {
+      "name": "Via Trolebus",
+      "domain": "viatrolebus.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Via Trolebus"
+    },
+    {
+      "name": "A8 Sergipe",
+      "domain": "a8se.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "A8 Sergipe"
+    },
+    {
+      "name": "Jornal Bom Dia",
+      "domain": "jornalbomdia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Jornal Bom Dia"
+    },
+    {
+      "name": "TODODIA",
+      "domain": "tododia.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "TODODIA"
+    },
+    {
+      "name": "Technibus",
+      "domain": "technibus.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Technibus"
+    },
+    {
+      "name": "Cidade Conecta",
+      "domain": "cidadeconecta.com",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Cidade Conecta"
+    },
+    {
+      "name": "Boca News",
+      "domain": "bocanews.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Boca News"
+    },
+    {
+      "name": "Rádio Cultura Foz",
+      "domain": "radioculturafoz.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "Rádio Cultura Foz"
+    },
+    {
+      "name": "A Tribuna MT",
+      "domain": "atribunamt.com.br",
+      "lean": "center",
+      "factuality": "high",
+      "ownership": "A Tribuna MT"
+    }
+  ]
+}

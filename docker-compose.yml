@@ -1,0 +1,40 @@
+services:
+  mirante:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mirante-web
+    restart: unless-stopped
+    environment:
+      MIRANTE_PORT: "8091"
+      MIRANTE_DB: /data/mirante.db
+      MIRANTE_DIST: /app/dist
+      MIRANTE_CACHE_TTL: "1800"
+      MIRANTE_FULLTEXT_ENABLED: "${MIRANTE_FULLTEXT_ENABLED:-true}"
+      MIRANTE_FULLTEXT_MAX: "${MIRANTE_FULLTEXT_MAX:-12}"
+      RUST_LOG: "info"
+      # Relance generativo opcional. O .env do host (gitignored) define a chave.
+      MIRANTE_LLM_PROVIDER: "${MIRANTE_LLM_PROVIDER:-none}"
+      MIRANTE_LLM_API_KEY: "${MIRANTE_LLM_API_KEY:-}"
+      MIRANTE_LLM_MODEL: "${MIRANTE_LLM_MODEL:-openai/gpt-4o-mini}"
+      MIRANTE_LLM_BASE_URL: "${MIRANTE_LLM_BASE_URL:-https://openrouter.ai/api/v1}"
+    volumes:
+      - mirante_data:/data
+    networks:
+      - proxy_network
+    ports:
+      - "127.0.0.1:8091:8091"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8091/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  mirante_data:
+    name: mirante_data
+
+networks:
+  proxy_network:
+    external: true

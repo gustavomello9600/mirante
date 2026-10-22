@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirante — A notícia por inteiro</title>
+<meta name="description" content="Escolha um tema e veja como veículos de posições diferentes cobriram a mesma história. Relance com fontes, gráficos e o que ficou de fora.">
+<meta name="theme-color" content="#F4F3ED">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F4F3ED'/%3E%3Ccircle cx='16' cy='13' r='6.5' fill='none' stroke='%232438E8' stroke-width='2'/%3E%3Cpath d='M4 24h24' stroke='%232438E8' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/app.css">
+</head>
+<body>
+<div id="app"></div>
+<script src="/config.js"></script>
+<script>
+  // Vazio = mesma origem. Em deploy estático, config.js define a API.
+  if (window.MIRANTE_API_BASE === undefined) window.MIRANTE_API_BASE = "";
+  window.MIRANTE_API_BASE = String(window.MIRANTE_API_BASE).replace(/\/$/, "");
+</script>
+<script type="module">
+  import init from "/pkg/mirante_web.js";
+  init().catch((error) => {
+    console.error(error);
+    document.getElementById("app").innerHTML =
+      '<main class="state-page"><div class="error-state"><h1>Não foi possível carregar o app</h1><p>Recarregue a página. Se o problema continuar, o WebAssembly não foi servido corretamente.</p></div></main>';
+  });
+</script>
+</body>
+</html>
